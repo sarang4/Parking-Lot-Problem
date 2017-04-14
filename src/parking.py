@@ -83,7 +83,7 @@ class Parking(object):
         if not self._do_primary_checks():
             return
 
-        print "Slot No.\tRegistration No\tColour"
+        print "Slot No\tRegistration No\tColour"
         for i in self.slots.values():
             if not i.available and i.car:
                 print "%s\t%s\t%s" % (i.slot_no, i.car.reg_no, i.car.colour)
