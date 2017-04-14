@@ -5,14 +5,14 @@ class PSlot(object):
     operation related to it.
     """
 
-    def __init__(self):
-        self._car = None
-        self._slot_no = None
-        self._available = None
+    def __init__(self, slot_no=None, available=None):
+        self.car = None
+        self.slot_no = slot_no
+        self.available = available
 
     @property
     def car(self):
-        return self._reg_no
+        return self._car
 
     @car.setter
     def car(self, value):
@@ -28,7 +28,7 @@ class PSlot(object):
 
     @property
     def available(self):
-        return self._slot_no
+        return self._available
 
     @available.setter
     def available(self, value):
